@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blackjack Trainer</title><link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f1720">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BJ Trainer">
+</head>
+<body><div class="app">
+<header><div><h1>Blackjack Trainer</h1><div class="subtitle">6 decks · S17 · 3:2 · double 9/10/11 · split once</div></div><button id="newShoe" class="secondary">New Shoe</button></header>
+<main><section class="table">
+<div class="zone"><h2>Dealer</h2><div id="dealerCards" class="cards"></div><div id="dealerTotal" class="total"></div></div>
+<div class="zone player-zone"><h2>You</h2><div id="hands"></div></div>
+<div id="message" class="message">Click Deal to start.</div>
+<div class="actions"><button id="deal">Deal</button><button data-action="hit">Hit</button><button data-action="stand">Stand</button><button data-action="double">Double</button><button data-action="split">Split</button><button data-action="insurance">Insurance</button></div>
+</section>
+<aside><h2>Training</h2><div class="stat"><span>Decisions</span><strong id="handsPlayed">0</strong></div><div class="stat"><span>Correct</span><strong id="correct">0</strong></div><div class="stat"><span>Accuracy</span><strong id="accuracy">—</strong></div>
+      <div class="stat"><span>Won</span><strong id="won">0</strong></div>
+      <div class="stat"><span>Lost</span><strong id="lost">0</strong></div>
+      <div class="stat"><span>Push</span><strong id="push">0</strong></div><hr><h3>Current decision</h3><div id="decisionPanel">Deal a hand.</div><hr><h3>Rules</h3><ul><li>6 decks</li><li>Dealer stands on soft 17</li><li>Blackjack pays 3:2</li><li>Double on 9, 10 or 11</li><li>Double after split allowed</li><li>Aces: one card only when split</li><li>Split once only</li><li>Split 21 is not blackjack</li><li>Insurance pays 2:1</li><li>No surrender</li></ul></aside>
+</main></div><script src="app.js"></script></body></html>
